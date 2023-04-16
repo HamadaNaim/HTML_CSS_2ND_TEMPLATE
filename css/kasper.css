@@ -36,7 +36,7 @@ ul {
 }
 @media (min-width: 992px) {
   .container {
-    width: 970;
+    width: 970px;
   }
 }
 @media (min-width: 1200px) {
@@ -411,7 +411,7 @@ Header nav .form i {
 .portfolio .imgs-container .box .caption {
   position: absolute;
   left: 0;
-  padding:20px;
+  padding: 20px;
   background-color: white;
   width: 100%;
   transition: 0.3s;
@@ -435,3 +435,126 @@ Header nav .form i {
   text-transform: uppercase;
 }
 /* End portfolio */
+/* Start Video */
+.video {
+  position: relative;
+}
+.video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%); /* Black w/ opacity/see-through */
+}
+.video video {
+  width: 100%;
+}
+.video .text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  color: white;
+  background-color: var(--transparent-color);
+  text-align: center;
+}
+.video .text h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.video .text p {
+  margin-bottom: 30px;
+}
+.video .text button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  text-transform: uppercase;
+}
+/* End Video */
+/* Start About */
+.about {
+  padding-top: var(--section-padding);
+  text-align: center;
+  overflow: hidden;
+}
+.about img {
+  position: relative;
+  bottom: -120px;
+  margin-top: -120px;
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .about img {
+    bottom: -60px;
+    margin-top: -60px;
+  }
+}
+/* End About */
+/* Start Stats */
+.stats {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  text-align: center;
+  background-image: url(../images/stats.png);
+  background-size: cover;
+  position: relative;
+}
+.stats::before {
+  content: ""; /* This is necessary for the pseudo element to work. */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%); /* Black w/ opacity/see-through */
+}
+.stats .container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.stats .container .box {
+  color: white;
+  padding: 50px;
+  background-color: var(--transparent-color);
+}
+@media (max-width: 767px) {
+  .stats .container .box {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .stats .container .box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .stats .container .box {
+    flex-basis: 25%;
+  }
+}
+.stats .container .box i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: black;
+  margin: 0 auto 30px;
+}
+.stats .container .box .number {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+.stats .container .box p {
+  font-size: 14px;
+}
+/* End Stats */
